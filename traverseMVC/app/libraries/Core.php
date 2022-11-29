@@ -17,7 +17,7 @@
 
             //check url pages exist
             if(file_exists('../app/controller/' . ucwords($url[0]) . '.php')){
-                $this->currentController = $url[0];
+                $this->currentController = ucwords($url[0]);
             }
 
             //require the control
