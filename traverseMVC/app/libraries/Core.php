@@ -16,12 +16,12 @@
             $url = $this->getUrl();
 
             //check url pages exist
-            if(file_exists('../app/controller/' . ucwords($url[0]) . '.php')){
+            if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')){
                 $this->currentController = ucwords($url[0]);
             }
 
             //require the control
-            require_once('../app/controller' . $this->currentController . '.php');
+            require_once('../app/controllers/' . $this->currentController . '.php');
 
             //instatiate the class
             $this->currentController = new $this->currentController;
