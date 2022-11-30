@@ -4,4 +4,12 @@
             
         }
 
+        public function index(){
+            $data = [
+                "title" => "Traverse MVC"
+            ];
+
+            $this->view('pages/index', $data);
+        }
+
     }
